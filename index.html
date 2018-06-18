@@ -50,19 +50,32 @@
             height: 1.5rem;
             cursor: pointer;
             opacity: .33;
+            animation-name: example;
+            animation-duration: .5s;
+            animation-timing-function: ease-out;
         }
 
         .credits {
-            font-size: .2rem;
+            font-size: calc(12px + .1rem);
             margin-top: auto;
             order: 9;
             opacity: .66;
             filter: grayscale(1);
+            transition: .2s ease-out;
         }
 
         .credits:hover {
             opacity: 1;
             filter: grayscale(0);
+        }
+
+        @keyframes example {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -70,7 +83,8 @@
 <div class="credits">
     made with 🤬💩🍺☠️ by <a href="https://www.schliflo.de" target="_blank" rel="noopener">schliflo</a> on <a
         href="https://github.com/schliflo/schimpfwortgenerator" target="_blank" rel="noopener">GitHub</a> - schimpfwort
-    <a href="https://github.com/schliflo/schimpfwortgenerator/pulls" target="_blank" rel="noopener">contributions</a> welcome 🎉
+    <a href="https://github.com/schliflo/schimpfwortgenerator/pulls" target="_blank" rel="noopener">contributions</a>
+    welcome 🎉
 </div>
 <script src="insult-gen.js" async></script>
 </body>
